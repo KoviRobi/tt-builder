@@ -7,6 +7,10 @@ description = "An environment containing the python based tools for Tiny Tapeout
 python = "^3.9"
 tt-support-tools = {git = "https://github.com/KoviRobi/tt-support-tools.git", rev = "package-nix"}
 gds2gltf = {git = "https://github.com/KoviRobi/GDS2glTF", rev = "package-nix"}
+cocotb = "^1.8.1"
+pytest = "^8.1.1"
+cocotb-test = "^0.2.5"
+hypothesis = "^6.100.1"
 
 
 [build-system]

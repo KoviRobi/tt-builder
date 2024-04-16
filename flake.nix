@@ -41,6 +41,12 @@
           pkgs.netlistsvg
 
           pkgs.nodejs # For the gds viewer
+
+          pkgs.clang # for verilator
+          self.packages.${system}.tt-tools.pkgs.cocotb
+          self.packages.${system}.tt-tools.pkgs.cocotb-test
+          self.packages.${system}.tt-tools.pkgs.pytest
+          self.packages.${system}.tt-tools.pkgs.hypothesis
         ];
       in
       {
@@ -49,6 +55,18 @@
           tt-tools = p2n.mkPoetryEnv {
             projectDir = self;
             overrides = p2n.overrides.withDefaults (final: prev: {
+
+              find-libpython = prev.find-libpython.overridePythonAttrs (old: {
+                buildInputs = (old.buildInputs or [ ]) ++ [ final.setuptools ];
+              });
+
+              cocotb = prev.cocotb.overridePythonAttrs (old: {
+                buildInputs = (old.buildInputs or [ ]) ++ [ final.setuptools ];
+              });
+
+              cocotb-test = prev.cocotb-test.overridePythonAttrs (old: {
+                buildInputs = (old.buildInputs or [ ]) ++ [ final.setuptools ];
+              });
 
               gds2gltf = prev.gds2gltf.overridePythonAttrs (old: {
                 buildInputs = (old.buildInputs or [ ]) ++ [ final.poetry ];

@@ -12,6 +12,25 @@ files = [
 ]
 
 [[package]]
+name = "attrs"
+version = "23.2.0"
+description = "Classes Without Boilerplate"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "attrs-23.2.0-py3-none-any.whl", hash = "sha256:99b87a485a5820b23b879f04c2305b44b951b502fd64be915879d77a7e8fc6f1"},
+    {file = "attrs-23.2.0.tar.gz", hash = "sha256:935dc3b529c262f6cf76e50877d35a4bd3c1de194fd41f47a2b7ae8f19971f30"},
+]
+
+[package.extras]
+cov = ["attrs[tests]", "coverage[toml] (>=5.3)"]
+dev = ["attrs[tests]", "pre-commit"]
+docs = ["furo", "myst-parser", "sphinx", "sphinx-notfound-page", "sphinxcontrib-towncrier", "towncrier", "zope-interface"]
+tests = ["attrs[tests-no-zope]", "zope-interface"]
+tests-mypy = ["mypy (>=1.6)", "pytest-mypy-plugins"]
+tests-no-zope = ["attrs[tests-mypy]", "cloudpickle", "hypothesis", "pympler", "pytest (>=4.3.0)", "pytest-xdist[psutil]"]
+
+[[package]]
 name = "cairocffi"
 version = "1.6.0"
 description = "cffi-based cairo bindings for Python"
@@ -249,6 +268,72 @@ files = [
 colorama = {version = "*", markers = "platform_system == \"Windows\""}
 
 [[package]]
+name = "cocotb"
+version = "1.8.1"
+description = "cocotb is a coroutine based cosimulation library for writing VHDL and Verilog testbenches in Python."
+optional = false
+python-versions = ">=3.6"
+files = [
+    {file = "cocotb-1.8.1-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:06ae2b2d899095ee4fd4f9604e0fd3706102ef681659f8dc68e4faf6d990d89f"},
+    {file = "cocotb-1.8.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:f8d642e1106750a519c015c651ec94a5d9008da0a29d39b2d073206bd60ce452"},
+    {file = "cocotb-1.8.1-cp310-cp310-manylinux_2_5_i686.manylinux1_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:de9d329e747048ae8d9c08794cc2ee48850b13c387d647227ff76ac2df184fcb"},
+    {file = "cocotb-1.8.1-cp310-cp310-win32.whl", hash = "sha256:87cb47d81d6c55f64662512dda8088e5f430740a42feaa67f7b8e10bd249c02c"},
+    {file = "cocotb-1.8.1-cp310-cp310-win_amd64.whl", hash = "sha256:8b0643be8b1dee02453233a40ad94919f5781bcb08893689c99b9c7ab08695f3"},
+    {file = "cocotb-1.8.1-cp311-cp311-macosx_10_9_x86_64.whl", hash = "sha256:708cb6fcb2ee00fe80bd45a03f2a202980d2b563dcb064c2f3c904c84e87e2b1"},
+    {file = "cocotb-1.8.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:4a6d3d824c746410da8f294c34dcca820f1350c1639cafb4b6394844a07f7371"},
+    {file = "cocotb-1.8.1-cp311-cp311-manylinux_2_5_i686.manylinux1_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:a3a9e442211691a3602dd8cce288e9b66f2bab220bc01d1b17e5f30db4a9622c"},
+    {file = "cocotb-1.8.1-cp311-cp311-win32.whl", hash = "sha256:7d47c3aa3432575eb26f6783ef7832a6db873265fd40a89ade22599e59a784f6"},
+    {file = "cocotb-1.8.1-cp311-cp311-win_amd64.whl", hash = "sha256:9ffebe392a4f0cb757ccea51d4902db9abc537e57b9151c5ecc8b4f898ec7817"},
+    {file = "cocotb-1.8.1-cp312-cp312-macosx_10_9_x86_64.whl", hash = "sha256:9d70978a5c587fc26c66c3f0e8a5bc0545a70397cbfd15b342685fed38959fc1"},
+    {file = "cocotb-1.8.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:5692e56925de8d71ce8d379bd80a2e103fe0fba1e0c4c3b539b10eafe22fb6c1"},
+    {file = "cocotb-1.8.1-cp312-cp312-manylinux_2_5_i686.manylinux1_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:4cbfb462315b12f157381c388f3ab5a074c0293e54852f8851152bf295bf6807"},
+    {file = "cocotb-1.8.1-cp312-cp312-win32.whl", hash = "sha256:ac5fa8f47613c1487156d20fb09d4679566572922971ea922ec5acec38629fa9"},
+    {file = "cocotb-1.8.1-cp312-cp312-win_amd64.whl", hash = "sha256:b9e7a09d0f76115f02d9c957110d5970e759c2bc8d1d5a448716ed3a67a66367"},
+    {file = "cocotb-1.8.1-cp36-cp36m-macosx_10_9_x86_64.whl", hash = "sha256:34da6f570c584434e34fe98f1b03cd394c2e43302c85a5510c6aebc5bffd679a"},
+    {file = "cocotb-1.8.1-cp36-cp36m-manylinux_2_5_i686.manylinux1_i686.whl", hash = "sha256:4f8f7401f107e04fb5f1c1bbb6a4434d11fff4bfe6871bea8a822b3ec91e7885"},
+    {file = "cocotb-1.8.1-cp36-cp36m-manylinux_2_5_x86_64.manylinux1_x86_64.whl", hash = "sha256:2343642030caf03b707eb7ee665de3adcffab08c5884b40c363ae042e1aad3d4"},
+    {file = "cocotb-1.8.1-cp36-cp36m-win32.whl", hash = "sha256:ab136393aa5776a9a6f25d94af62dd947791482d325516072288668741be934b"},
+    {file = "cocotb-1.8.1-cp36-cp36m-win_amd64.whl", hash = "sha256:1d3af65372ed044f27b69039325bf018738685e59be928fb4efde0c0e86b1ba0"},
+    {file = "cocotb-1.8.1-cp37-cp37m-macosx_10_9_x86_64.whl", hash = "sha256:e8d9525a92312d8271fc612c98ce027d285c3f93925f63908c4e9af72a9ba5eb"},
+    {file = "cocotb-1.8.1-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:bfa07a47e6b0654ed65e06b37b93316cc3afb7d9b52fe5c07579edd10bdb6281"},
+    {file = "cocotb-1.8.1-cp37-cp37m-manylinux_2_5_i686.manylinux1_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:298f4e3c0eafda1964112d050cf08827f5aa3c3759960bef1cdce1c57ce645d4"},
+    {file = "cocotb-1.8.1-cp37-cp37m-win32.whl", hash = "sha256:174209743e2743a4c1adb885bb212bb40447464a54388cae360225cb4353499b"},
+    {file = "cocotb-1.8.1-cp37-cp37m-win_amd64.whl", hash = "sha256:71a6a2e39596fe6f2094cc3d4fc35621a6c1e74ca70dc868973a71c6f77f3bdb"},
+    {file = "cocotb-1.8.1-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:f3a6f6f0fa5914c491d22d5796f15b5d0b152f76c071fecb3665af60b471bbe7"},
+    {file = "cocotb-1.8.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:1196ba5f341c4e6752e4db71e99932499980a907ec264387d75c6f37d3e09ab6"},
+    {file = "cocotb-1.8.1-cp38-cp38-manylinux_2_5_i686.manylinux1_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:b1ba54da9217b2231d58a380b19f5bc749f6b1d1b21460bc0951d0c1317a2f5d"},
+    {file = "cocotb-1.8.1-cp38-cp38-win32.whl", hash = "sha256:032569407d22b55a1d7acb07b1be12e2010e332c49d2c04404707d10d892cc27"},
+    {file = "cocotb-1.8.1-cp38-cp38-win_amd64.whl", hash = "sha256:b70d8c803c7215bd54249e53b2591b484346420168dd1cafdb2e0d27e214db11"},
+    {file = "cocotb-1.8.1-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:cbe760f6a0869140a7fa2124c295e2a4299300f0f839017e6b43ab4490bbc522"},
+    {file = "cocotb-1.8.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:d2a05df85a5259654d2c10cc0ac8ad877b6ca986fb559a911a9207bcdbc887fd"},
+    {file = "cocotb-1.8.1-cp39-cp39-manylinux_2_5_i686.manylinux1_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:59cb5e35533b28301e1ff1858aabe1d6bac4305536d5fc40edb188dfda42e0ae"},
+    {file = "cocotb-1.8.1-cp39-cp39-win32.whl", hash = "sha256:2824f26d15713056de44507017f88189419cf7b68252cedbdbed272ee753917f"},
+    {file = "cocotb-1.8.1-cp39-cp39-win_amd64.whl", hash = "sha256:797044b85d5efc56bad7ff789f1811990e67de22fbec614ac37009a9aa608ce5"},
+    {file = "cocotb-1.8.1.tar.gz", hash = "sha256:1499dbe0d4d10676bc9b234861e1df171a7f02aca6b696b5fadf01fe61e3a4f6"},
+]
+
+[package.dependencies]
+find-libpython = "*"
+
+[package.extras]
+bus = ["cocotb-bus"]
+
+[[package]]
+name = "cocotb-test"
+version = "0.2.5"
+description = ""
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "cocotb-test-0.2.5.tar.gz", hash = "sha256:0f19d9cfc1b7f64fe25394ff5a5d5f788f2d5b4f04b0a742f1330c4b6ebf1343"},
+]
+
+[package.dependencies]
+cocotb = ">=1.5"
+find_libpython = "*"
+pytest = "*"
+
+[[package]]
 name = "colorama"
 version = "0.4.6"
 description = "Cross-platform colored terminal text."
@@ -333,6 +418,20 @@ files = [
 ]
 
 [[package]]
+name = "exceptiongroup"
+version = "1.2.0"
+description = "Backport of PEP 654 (exception groups)"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "exceptiongroup-1.2.0-py3-none-any.whl", hash = "sha256:4bfd3996ac73b41e9b9628b04e079f193850720ea5945fc96a08633c66912f14"},
+    {file = "exceptiongroup-1.2.0.tar.gz", hash = "sha256:91f5c769735f051a4290d52edd0858999b57e5876e9f85937691bd4c9fa3ed68"},
+]
+
+[package.extras]
+test = ["pytest (>=6)"]
+
+[[package]]
 name = "filelock"
 version = "3.13.4"
 description = "A platform independent file lock."
@@ -347,6 +446,17 @@ files = [
 docs = ["furo (>=2023.9.10)", "sphinx (>=7.2.6)", "sphinx-autodoc-typehints (>=1.25.2)"]
 testing = ["covdefaults (>=2.3)", "coverage (>=7.3.2)", "diff-cover (>=8.0.1)", "pytest (>=7.4.3)", "pytest-cov (>=4.1)", "pytest-mock (>=3.12)", "pytest-timeout (>=2.2)"]
 typing = ["typing-extensions (>=4.8)"]
+
+[[package]]
+name = "find-libpython"
+version = "0.4.0"
+description = "Finds the libpython associated with your environment, wherever it may be hiding"
+optional = false
+python-versions = "*"
+files = [
+    {file = "find_libpython-0.4.0-py3-none-any.whl", hash = "sha256:034a4253bd57da3408aefc59aeac1650150f6c1f42e10fdd31615cf1df0842e3"},
+    {file = "find_libpython-0.4.0.tar.gz", hash = "sha256:46f9cdcd397ddb563b2d7592ded3796a41c1df5222443bd9d981721c906c03e6"},
+]
 
 [[package]]
 name = "gds2gltf"
@@ -465,6 +575,39 @@ gitdb = ">=4.0.1,<5"
 test = ["black", "coverage[toml]", "ddt (>=1.1.1,!=1.4.3)", "mock", "mypy", "pre-commit", "pytest", "pytest-cov", "pytest-instafail", "pytest-subtests", "pytest-sugar"]
 
 [[package]]
+name = "hypothesis"
+version = "6.100.1"
+description = "A library for property-based testing"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "hypothesis-6.100.1-py3-none-any.whl", hash = "sha256:3dacf6ec90e8d14aaee02cde081ac9a17d5b70105e45e6ac822db72052c0195b"},
+    {file = "hypothesis-6.100.1.tar.gz", hash = "sha256:ebff09d7fa4f1fb6a855a812baf17e578b4481b7b70ec6d96496210d1a4c6c35"},
+]
+
+[package.dependencies]
+attrs = ">=22.2.0"
+exceptiongroup = {version = ">=1.0.0", markers = "python_version < \"3.11\""}
+sortedcontainers = ">=2.1.0,<3.0.0"
+
+[package.extras]
+all = ["backports.zoneinfo (>=0.2.1)", "black (>=19.10b0)", "click (>=7.0)", "crosshair-tool (>=0.0.54)", "django (>=3.2)", "dpcontracts (>=0.4)", "hypothesis-crosshair (>=0.0.2)", "lark (>=0.10.1)", "libcst (>=0.3.16)", "numpy (>=1.17.3)", "pandas (>=1.1)", "pytest (>=4.6)", "python-dateutil (>=1.4)", "pytz (>=2014.1)", "redis (>=3.0.0)", "rich (>=9.0.0)", "tzdata (>=2024.1)"]
+cli = ["black (>=19.10b0)", "click (>=7.0)", "rich (>=9.0.0)"]
+codemods = ["libcst (>=0.3.16)"]
+crosshair = ["crosshair-tool (>=0.0.54)", "hypothesis-crosshair (>=0.0.2)"]
+dateutil = ["python-dateutil (>=1.4)"]
+django = ["django (>=3.2)"]
+dpcontracts = ["dpcontracts (>=0.4)"]
+ghostwriter = ["black (>=19.10b0)"]
+lark = ["lark (>=0.10.1)"]
+numpy = ["numpy (>=1.17.3)"]
+pandas = ["pandas (>=1.1)"]
+pytest = ["pytest (>=4.6)"]
+pytz = ["pytz (>=2014.1)"]
+redis = ["redis (>=3.0.0)"]
+zoneinfo = ["backports.zoneinfo (>=0.2.1)", "tzdata (>=2024.1)"]
+
+[[package]]
 name = "identify"
 version = "2.5.35"
 description = "File identification library for Python"
@@ -506,6 +649,17 @@ zipp = {version = ">=3.1.0", markers = "python_version < \"3.10\""}
 [package.extras]
 docs = ["furo", "jaraco.packaging (>=9)", "jaraco.tidelift (>=1.4)", "rst.linker (>=1.9)", "sphinx (>=3.5)", "sphinx-lint"]
 testing = ["flake8 (<5)", "pytest (>=6)", "pytest-black (>=0.3.7)", "pytest-checkdocs (>=2.4)", "pytest-cov", "pytest-enabler (>=1.3)", "pytest-flake8", "pytest-mypy (>=0.9.1)"]
+
+[[package]]
+name = "iniconfig"
+version = "2.0.0"
+description = "brain-dead simple config-ini parsing"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "iniconfig-2.0.0-py3-none-any.whl", hash = "sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374"},
+    {file = "iniconfig-2.0.0.tar.gz", hash = "sha256:2d91e135bf72d31a410b17c16da610a82cb55f6b0477d1a902134b24a455b8b3"},
+]
 
 [[package]]
 name = "marshmallow"
@@ -705,6 +859,21 @@ docs = ["furo (>=2023.9.10)", "proselint (>=0.13)", "sphinx (>=7.2.6)", "sphinx-
 test = ["appdirs (==1.4.4)", "covdefaults (>=2.3)", "pytest (>=7.4.3)", "pytest-cov (>=4.1)", "pytest-mock (>=3.12)"]
 
 [[package]]
+name = "pluggy"
+version = "1.4.0"
+description = "plugin and hook calling mechanisms for python"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "pluggy-1.4.0-py3-none-any.whl", hash = "sha256:7db9f7b503d67d1c5b95f59773ebb58a8c1c288129a88665838012cfb07b8981"},
+    {file = "pluggy-1.4.0.tar.gz", hash = "sha256:8c85c2876142a764e5b7548e7d9a0e0ddb46f5185161049a79b7e974454223be"},
+]
+
+[package.extras]
+dev = ["pre-commit", "tox"]
+testing = ["pytest", "pytest-benchmark"]
+
+[[package]]
 name = "pre-commit"
 version = "3.4.0"
 description = "A framework for managing and maintaining multi-language pre-commit hooks."
@@ -746,6 +915,28 @@ files = [
 [package.dependencies]
 dataclasses-json = ">=0.0.25"
 deprecated = "*"
+
+[[package]]
+name = "pytest"
+version = "8.1.1"
+description = "pytest: simple powerful testing with Python"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "pytest-8.1.1-py3-none-any.whl", hash = "sha256:2a8386cfc11fa9d2c50ee7b2a57e7d898ef90470a7a34c4b949ff59662bb78b7"},
+    {file = "pytest-8.1.1.tar.gz", hash = "sha256:ac978141a75948948817d360297b7aae0fcb9d6ff6bc9ec6d514b85d5a65c044"},
+]
+
+[package.dependencies]
+colorama = {version = "*", markers = "sys_platform == \"win32\""}
+exceptiongroup = {version = ">=1.0.0rc8", markers = "python_version < \"3.11\""}
+iniconfig = "*"
+packaging = "*"
+pluggy = ">=1.4,<2.0"
+tomli = {version = ">=1", markers = "python_version < \"3.11\""}
+
+[package.extras]
+testing = ["argcomplete", "attrs (>=19.2)", "hypothesis (>=3.56)", "mock", "pygments (>=2.7.2)", "requests", "setuptools", "xmlschema"]
 
 [[package]]
 name = "python-frontmatter"
@@ -874,6 +1065,17 @@ files = [
 ]
 
 [[package]]
+name = "sortedcontainers"
+version = "2.4.0"
+description = "Sorted Containers -- Sorted List, Sorted Dict, Sorted Set"
+optional = false
+python-versions = "*"
+files = [
+    {file = "sortedcontainers-2.4.0-py2.py3-none-any.whl", hash = "sha256:a163dcaede0f1c021485e957a39245190e74249897e2ae4b2aa38595db237ee0"},
+    {file = "sortedcontainers-2.4.0.tar.gz", hash = "sha256:25caa5a06cc30b6b83d11423433f65d1f9d76c4c6a0c90e3379eaa43b9bfdb88"},
+]
+
+[[package]]
 name = "stripe"
 version = "5.4.0"
 description = "Python bindings for the Stripe API"
@@ -904,6 +1106,17 @@ webencodings = ">=0.4"
 [package.extras]
 doc = ["sphinx", "sphinx_rtd_theme"]
 test = ["flake8", "isort", "pytest"]
+
+[[package]]
+name = "tomli"
+version = "2.0.1"
+description = "A lil' TOML parser"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "tomli-2.0.1-py3-none-any.whl", hash = "sha256:939de3e7a6161af0c887ef91b7d41a53e7c5a1ca976325f429cb46ea9bc30ecc"},
+    {file = "tomli-2.0.1.tar.gz", hash = "sha256:de526c12914f0c550d15924c62d72abc48d6fe7364aa87328337a31007fe8a4f"},
+]
 
 [[package]]
 name = "triangle"
@@ -1216,4 +1429,4 @@ testing = ["big-O", "flake8 (<5)", "jaraco.functools", "jaraco.itertools", "more
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9"
-content-hash = "42c1685443fe919031f71e5a8138cb175c6e2bddfa13665b0313cee2fa3385d7"
+content-hash = "e188b14d21c8804df57dd75f00e530f8a6e40830c62fd6e789826fb11ed60679"
